@@ -17,4 +17,14 @@ public class ConsoleController {
 		}
 	}
 	
+	@RequestMapping("login")
+	public String apresentaTelaDeLogin(){
+		try{
+			return "login/login";
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			return "erro/banco";
+		}
+	}
 }
