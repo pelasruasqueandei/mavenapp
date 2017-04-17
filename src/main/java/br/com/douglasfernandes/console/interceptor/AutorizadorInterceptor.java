@@ -13,12 +13,13 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter
 	  public boolean preHandle(HttpServletRequest request, HttpServletResponse response,Object controller) throws Exception
 	 {
 		  String uri = request.getRequestURI();
-	      
-	      if(uri.endsWith("esqueciSenha")||uri.contains("getPontos")||uri.endsWith("login")||uri.endsWith("entrar")||uri.contains("resources")||uri.contains("tags/")||uri.contains("erro")) {
-	    	  Logs.info("[AutorizadorInterceptor INFO]: Área externa.");
+	      Logs.info("[AutorizadorInterceptor INFO]: URL("+uri+")");
+		  
+	      if(uri.contains("WEB-INF")||uri.endsWith("esqueciSenha")||uri.contains("getPontos")||uri.endsWith("login")||uri.endsWith("entrar")||uri.contains("resources")||uri.contains("tags/")||uri.contains("erro")) {
+	    	  Logs.info("[AutorizadorInterceptor INFO]: Area externa.");
 	    	  return true;
 	      }
-	      Logs.warn("[AutorizadorInterceptor WARN]: Login necessário.");
+	      Logs.warn("[AutorizadorInterceptor WARN]: Login necessario.");
 	      response.sendRedirect("login");
 	      return false;
 	 }

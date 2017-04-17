@@ -1,0 +1,20 @@
+.login-image{
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+
+@media screen and (min-width:351){
+	.login-image{
+		background-image: "/resources/images/logo/logo.png";
+		width: 400px;
+		height: 50px;
+	}
+}
+@media screen and (max-width:350){
+	.login-image{
+		background-image: "/resources/images/logo/icone.png";
+		width: 100px;
+		height:100px;
+	}
+}
