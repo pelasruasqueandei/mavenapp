@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:url value="/WEB-INF/views/commons/header.jsp" var="header"/>
+<c:url value="../commons/header.jsp" var="header"/>
 <c:import url="${header}"/>
 	<div class="container-fluid">
 	  <div class="row main-row">
@@ -21,5 +21,5 @@
 	    </div>
 	  </div>
 	</div>
-<c:url value="/WEB-INF/views/commons/footer.jsp" var="footer"/>
+<c:url value="../commons/footer.jsp" var="footer"/>
 <c:import url="${footer}"/>
