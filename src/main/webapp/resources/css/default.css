@@ -10,6 +10,12 @@
 	height:100px;
 }
 
+.styled-body{
+	background-image: url(/console/resources/images/main_backimage_large.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media screen and (min-width: 1328px){
 	.login-image{
 		background-image: url(/console/resources/images/logo/logo.png);
