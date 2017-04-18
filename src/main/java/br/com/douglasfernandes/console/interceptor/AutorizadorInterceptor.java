@@ -19,6 +19,9 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter
 	    	  Logs.info("[AutorizadorInterceptor INFO]: Area externa.");
 	    	  return true;
 	      }
+	      
+	      //TODO verifica se tem perfil logado antes.
+	      
 	      Logs.warn("[AutorizadorInterceptor WARN]: Login necessario.");
 	      response.sendRedirect("login");
 	      return false;
